@@ -1,0 +1,51 @@
+#fixed-timer {
+  position: fixed;
+  right: 48.3%; /* Cách mép phải 20px */
+  bottom: 2%; /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%); /* Dịch chuyển lên để căn giữa */
+  background: linear-gradient(
+    135deg,
+    #121111,
+    #533423
+  ); /* Gradient màu nổi bật */
+  color: white;
+  padding: 4px 4px;
+  border-radius: 7px; /* Bo góc mềm mại */
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bóng đổ hiện đại */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+}
+
+#fixed-timer:hover {
+  transform: translateY(-50%) scale(1.05); /* Giữ căn giữa dọc khi hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+#fixed-timer {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+#fixed-time {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Responsive adjustments for admin login */
+@media screen and (max-width: 768px) {
+  #fixed-time {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  #fixed-timer {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

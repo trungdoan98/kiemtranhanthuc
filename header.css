@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header-container {
+  background-color: var(
+    --primary-red
+  ); /* Màu nền của container là màu đỏ chính (được định nghĩa bởi biến --primary-red) */
+  color: var(
+    --text-color
+  ); /* Màu chữ là màu văn bản (được định nghĩa bởi biến --text-color) */
+  display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+  flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang (theo hàng) */
+  align-items: center; /* Căn giữa các phần tử con theo trục dọc */
+  padding: 10px 60px; /* Khoảng cách bên trong: 10px trên/dưới, 60px trái/phải */
+  width: 100%; /* Chiều rộng chiếm toàn bộ container cha */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm bóng chữ: lệch 2px ngang, 2px dọc, mờ 4px, màu đen với độ trong suốt 0.7 */
+}
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 25px;
+}
+.header-content {
+  display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+  flex-direction: column; /* Sắp xếp các phần tử con theo cột (dọc) */
+  flex-grow: 1; /* Cho phép phần tử mở rộng để chiếm toàn bộ không gian còn lại trong container cha */
+}
+/* Dịch: .header-content là một container sử dụng Flexbox, sắp xếp nội dung theo cột dọc và mở rộng để lấp đầy không gian của container cha. */
+
+.main-title {
+  display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+  justify-content: space-between; /* Các phần tử con được phân bố đều, với khoảng cách tối đa giữa chúng */
+  width: 100%; /* Chiều rộng chiếm toàn bộ container cha */
+  font-weight: bold; /* Chữ in đậm */
+  margin-bottom: 5px; /* Khoảng cách dưới cùng là 5px */
+}
+/* Dịch: .main-title là một container Flexbox, phân bố các phần tử con (như title-left, title-right) đều ra hai bên (trái và phải), chiếm toàn bộ chiều rộng, chữ in đậm, và có khoảng cách 5px ở phía dưới. */
+
+.title-left {
+  font-size: 30px; /* Kích thước chữ là 30px */
+  text-transform: uppercase; /* Chuyển tất cả chữ thành chữ in hoa */
+}
+/* Dịch: .title-left là một tiêu đề với kích thước chữ 30px và tất cả chữ được chuyển thành in hoa. */
+
+.title-right {
+  font-size: 30px; /* Kích thước chữ là 30px */
+  text-transform: uppercase; /* Chuyển tất cả chữ thành chữ in hoa */
+}
+/* Dịch: .title-right là một tiêu đề với kích thước chữ 30px và tất cả chữ được chuyển thành in hoa. */
+
+.subtitle {
+  font-size: 18px; /* Kích thước chữ là 18px */
+  text-transform: uppercase; /* Chuyển tất cả chữ thành chữ in hoa */
+  font-weight: bold; /* Chữ in đậm */
+}
+/* Dịch: .subtitle là một tiêu đề phụ với kích thước chữ 18px, tất cả chữ in hoa và in đậm. */

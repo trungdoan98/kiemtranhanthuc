@@ -1,0 +1,97 @@
+* {
+  margin: 0; /* Loại bỏ lề ngoài mặc định của tất cả các phần tử */
+  padding: 0; /* Loại bỏ lề trong mặc định của tất cả các phần tử */
+  box-sizing: border-box; /* Đặt mô hình hộp để chiều rộng và chiều cao bao gồm padding và border */
+}
+
+body::before {
+  content: ""; /* Tạo một phần tử giả trước nội dung của body */
+  position: fixed; /* Định vị cố định trên màn hình */
+  top: 100px; /* Cách đỉnh màn hình 100px */
+  left: 130px; /* Cách lề trái màn hình 130px */
+  width: 90%; /* Chiều rộng chiếm 90% của màn hình */
+  height: 90%; /* Chiều cao chiếm 90% của màn hình */
+  background-image: url("/img/logo.png"); /* Sử dụng hình ảnh logo.png làm nền */
+  background-size: cover; /* Kéo giãn hình ảnh để bao phủ toàn bộ khu vực */
+  background-position: center; /* Căn giữa hình ảnh nền */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh nền */
+  z-index: -1; /* Đặt thứ tự lớp thấp hơn để nằm dưới nội dung khác */
+  opacity: 0.2; /* Độ trong suốt của hình nền là 0.2 (20%) */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Sử dụng font Arial, nếu không có thì dùng sans-serif */
+  line-height: 1.5; /* Khoảng cách dòng là 1.5 lần kích thước chữ (rộng hơn bình thường) */
+  margin: 0; /* Loại bỏ lề ngoài của body */
+  padding: 10px; /* Thêm khoảng cách bên trong 10px cho body */
+  background-color: #3a3939; /* Màu nền của body là xám đậm */
+}
+
+h1 {
+  text-align: center; /* Căn giữa nội dung của các tiêu đề cấp 1 */
+  color: #333; /* Màu chữ là xám đậm */
+}
+
+#login-screen {
+  max-width: 50%; /* Chiều rộng tối đa là 50% của container cha */
+  margin: 0 auto; /* Căn giữa container với lề trái/phải là 0 và tự động */
+  margin-top: 40px; /* Khoảng cách từ đỉnh là 40px */
+  background: white; /* Màu nền là trắng */
+  padding: 80px; /* Khoảng cách bên trong là 80px (đều cho tất cả các phía) */
+  border-radius: 20px; /* Bo góc 20px để tạo viền cong */
+  box-shadow: 0 0 20px rgba(99, 6, 6, 0.2); /* Thêm bóng đổ xung quanh, màu đỏ nhạt với độ trong suốt 0.2 */
+}
+.login-form label {
+  display: inline-block;
+  width: 100%;
+  margin: 1px 0 2px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 2px solid #504b4b;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.login-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(74, 79, 83, 0.3); /* Bóng đổ nhẹ */
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase; /* Chữ in hoa */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+  background: linear-gradient(
+    90deg,
+    var(--color-red--),
+    #a55b68
+  ); /* Gradient màu nổi bật */
+  background-size: 200% 200%; /* Kích thước gradient */
+  animation: gradient 5s ease infinite; /* Hiệu ứng chuyển động */
+}
+
+.login-form button:hover {
+  background: linear-gradient(
+    90deg,
+    #5153b1,
+    #4c6a8d
+  ); /* Gradient sáng hơn khi hover */
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite; /* Tăng tốc animation khi hover */
+  box-shadow: 0 6px 20px rgba(74, 79, 83, 0.5); /* Tăng bóng đổ */
+  transform: translateY(-2px); /* Nhấc nút lên nhẹ */
+}

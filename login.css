@@ -11,7 +11,7 @@ body::before {
   left: 130px; /* Cách lề trái màn hình 130px */
   width: 90%; /* Chiều rộng chiếm 90% của màn hình */
   height: 90%; /* Chiều cao chiếm 90% của màn hình */
-  background-image: url("img/logo.png"); /* Sử dụng hình ảnh logo.png làm nền */
+  background-image: url("/img/logo.png"); /* Sử dụng hình ảnh logo.png làm nền */
   background-size: cover; /* Kéo giãn hình ảnh để bao phủ toàn bộ khu vực */
   background-position: center; /* Căn giữa hình ảnh nền */
   background-repeat: no-repeat; /* Không lặp lại hình ảnh nền */

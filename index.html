@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ứng dụng kiểm tra nhận thức chính trị</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="timer.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="login.css" />
     <script src="questions.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="app.js" defer></script>
+
     <link rel="icon" href="img/logo.png" />
   </head>
   <body>
-    <!-- Tiêu đề đầu trang -->
-    <div class="tieu-de">
-      <div class="noi-dung-tieu-de">
-        <div class="logo-tieu-de">
-          <img src="img/LOGO98.png" alt="Logo" class="logo" />
+    <header class="header-container">
+      <img src="./img/LOGO98.png" alt="Logo Trung Đoàn 98" class="logo" />
+      <div class="header-content">
+        <div class="main-title">
+          <div class="title-left">Trung Đoàn 98 - Sư Đoàn 316</div>
+          <div class="title-right">Kiểm tra nhận thức chính trị trực tuyến</div>
         </div>
-        <div class="chu-tieu-de">
-          <span class="dong-to"
-            >TRUNG ĐOÀN 98 - SƯ ĐOÀN
-            316&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KIỂM
-            TRA NHẬN THỨC CHÍNH TRỊ TRỰC TUYẾN</span
-          ><br />
-          <span class="dong-nho">
-            TRUNG THÀNH - KIÊN QUYẾT - TRIỆT ĐỂ - ĐOÀN KẾT - SÁNG TẠO - CHỦ ĐỘNG
-            KHẮC PHỤC KHÓ KHĂN
-          </span>
+        <div class="subtitle">
+          Trung thành - Kiên quyết - Triệt để - Đoàn kết - Sáng tạo - Chủ động
+          khắc phục khó khăn
         </div>
       </div>
-    </div>
+    </header>
     <div id="login-screen">
       <h1>ĐĂNG NHẬP HỆ THỐNG THI</h1>
       <div class="login-form">
@@ -59,18 +58,17 @@
       </div>
     </div>
     <div class="container" style="display: none">
-      <h1>ĐỀ THI TRẮC NGHIỆM</h1>
-      <div
-        id="test-taker-info"
-        style="display: none; margin-bottom: 20px; font-size: 18px"
-      >
+      <div id="test-taker-info" style="display: none">
+        <h5>ĐỀ THI TRẮC NGHIỆM</h5>
         <p><strong>Họ và tên:</strong> <span id="info-username"></span></p>
         <p><strong>Đối tượng:</strong> <span id="info-doituong"></span></p>
         <p><strong>Đơn vị:</strong> <span id="info-donvi"></span></p>
         <p><strong>Cấp bậc:</strong> <span id="info-capbac"></span></p>
         <p><strong>Chức vụ:</strong> <span id="info-chucvu"></span></p>
       </div>
+
       <div class="button-group" id="test-mode-selection">
+        <h6>LỰA CHỌN CHẾ ĐỘ THI</h6>
         <button onclick="startRealTest()">📝 Thi thật</button>
         <button onclick="startPracticeTest()">📚 Thi thử</button>
         <button onclick="showReviewScreen()">📖 Ôn tập câu hỏi</button>
@@ -78,27 +76,23 @@
       <div id="quiz-container"></div>
       <div id="question-nav"></div>
       <div id="fixed-timer" style="display: none">
-        ⏳ Thời gian còn lại: <span id="fixed-time">--:--</span>
+        ⏳: <span id="fixed-time">--:--</span>
       </div>
       <div id="result"></div>
-      <div class="button-group">
-        <button id="submitBtn" onclick="nopBai()">📝 Nộp bài</button>
-        <button id="backBtn" onclick="quayVeTrangChu()">
-          🏠 Quay về trang chủ
-        </button>
+      <div class="button-groups">
+        <button id="submitBtn" onclick="nopBai()">📝 NỘP BÀI</button>
+        <button id="backBtn" onclick="quayVeTrangChu()">🏠 TRANG CHỦ</button>
         <button id="settingsBtn" onclick="showSettings()">
           ⚙️ Cài đặt bộ đề
         </button>
-        <button id="historyBtn" onclick="showHistory()">
-          📜 Xem lịch sử thi
-        </button>
+        <button id="historyBtn" onclick="showHistory()">📜 LỊCH SỬ THI</button>
       </div>
     </div>
 
     <div id="settings-screen" style="display: none">
       <h1>QUẢN LÝ BỘ ĐỀ</h1>
       <button onclick="showAddQuestionForm()">➕ Thêm câu hỏi</button>
-      <button onclick="backToQuiz()">🔙 Quay lại bài thi</button>
+      <button onclick="backToQuiz()">🔙 Quay lại</button>
       <div id="stats">Thống kê bộ đề</div>
       <table>
         <thead>
@@ -147,8 +141,8 @@
     </div>
 
     <div id="review-screen" style="display: none">
-      <h1>ÔN TẬP CÂU HỎI</h1>
-      <button onclick="backToQuiz()">🔙 Quay lại bài thi</button>
+      <h1>ÔN TẬP NGÂN HÀNG ĐỀ THI</h1>
+      <button onclick="backToQuiz()">🔙 Quay lại</button>
       <div id="review-questions"></div>
     </div>
 
@@ -158,10 +152,7 @@
       </div>
       <div id="history-list"></div>
       <div id="detailed-results"></div>
-      <button onclick="backToQuiz()">🔙 Quay lại bài thi</button>
+      <button onclick="backToQuiz()">🔙 Quay lại</button>
     </div>
-
-    <script src="questions.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>

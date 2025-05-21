@@ -1,126 +1,168 @@
-.tieu-de {
-  background-color: #a31d1d;
-  color: white;
-  padding: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 2;
-}
-.noi-dung-tieu-de {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.chu-tieu-de {
-  text-align: left;
-}
-.dong-to {
-  font-size: 40px;
-  font-weight: bold;
-  display: block;
-  margin-left: 50px;
-  white-space: nowrap; 
-}
-.dong-nho {
-  font-size: 20px;
-  display: block;
-  margin-top: 5px;
-  margin-left: 50px;
-}
-.logo-tieu-de img.logo {
-  height: 100px;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 100px;
-  left: 130px;
-  width: 90%;
-  height: 90%;
-  background-image: url("img/logo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  opacity: 0.2;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-}
-
-#login-screen,
 .container,
 #settings-screen,
 #history-screen {
-  max-width: 1500px;
+  max-width: 75%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 60px;
   background: white;
   padding: 50px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(245, 9, 9, 0.1);
+} /* Style cho container .button-group để căn giữa các nút */
+
+h5 {
+  text-align: center; /* Căn giữa nội dung của các tiêu đề cấp 1 */
+  color: #333; /* Màu chữ là xám đậm */
+  font-size: 2rem; /* Kích thước chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Thêm bóng đổ: lệch 2px ngang, 2px dọc, mờ 4px, màu đen với độ trong suốt 0.5 */
 }
 
-.login-form label {
-  display: inline-block;
-  width: 1000px;
-  margin: 12px 0 5px;
-  font-size: 1.8rem;
+/* Style cho container .button-group để căn giữa và tách nút */
+.button-group {
+  margin-top: 4vh; /* Khoảng cách trên là 10vh */
+  display: flex; /* Sử dụng Flexbox */
+  flex-direction: row; /* Xếp các nút theo hàng ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+  gap: 50px; /* Khoảng cách giữa các nút */
 }
 
-.login-form input,
-.login-form select {
-  width: calc(100% - 105px);
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #504b4b;
-  border-radius: 2px;
-  font-size: 1.3rem;
-}
-
-.login-form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
+/* Style cho các nút trong #test-mode-selection */
+#test-mode-selection button {
+  margin-top: 4vh; /* Khoảng cách trên là 10vh */
+  margin-bottom: 10vh; /* Khoảng cách trên là 10vh */
+  padding: 40px 40px; /* Giữ padding */
+  font-size: 35px; /* Giữ kích thước chữ */
+  font-weight: bold;
+  color: white; /* Chữ màu trắng */
+  background-color: #a31d1d;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px; /* Bo góc nút */
+  box-shadow: 0 4px 15px rgba(74, 79, 83, 0.3); /* Đổ bóng nhẹ */
   cursor: pointer;
-  font-size: 1.3rem;
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+  width: 434px; /* Giữ chiều rộng cố định */
+  height: 150px; /* Giữ chiều cao cố định */
+  justify-content: center; /* Căn giữa nội dung trong nút */
+  align-items: center; /* Căn giữa theo trục dọc */
+  gap: 10px; /* Khoảng cách giữa icon và chữ */
+  text-align: center; /* Đảm bảo văn bản căn giữa */
 }
 
-.login-form button:hover {
-  background-color: #45a049;
+#test-mode-selection button:hover {
+  background: linear-gradient(
+    90deg,
+    #0d4179,
+    #0096cc
+  ); /* Gradient đậm hơn khi hover */
+  box-shadow: 0 6px 20px rgba(7, 8, 10, 0.5); /* Đổ bóng mạnh hơn */
+  transform: translateY(-2px); /* Nút nhấc lên nhẹ khi hover */
+}
+h6 {
+  text-align: center; /* Căn giữa nội dung của các tiêu đề cấp 1 */
+  color: #333; /* Màu chữ là xám đậm */
+  font-size: 2rem; /* Kích thước chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Thêm bóng đổ: lệch 2px ngang, 2px dọc, mờ 4px, màu đen với độ trong suốt 0.5 */
+}
+#test-taker-info {
+  font-size: 1rem; /* Kích thước chữ */
+  color: #333; /* Màu chữ là xám đậm */
+  text-align: left; /* Căn giữa nội dung của các tiêu đề cấp 1 */
+  margin-bottom: 20px; /* K hoảng cách dưới để không sát nút bên dưới */
+}
+/* Style cho container .button-group để căn giữa và tách nút */
+.button-groups {
+  display: flex; /* Sử dụng Flexbox */
+  flex-direction: row; /* Xếp các nút theo hàng ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+  gap: 20px; /* Khoảng cách giữa các nút */
+  min-height: 10vh; /* Đảm bảo container chiếm toàn bộ chiều cao màn hình */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  padding: 0; /* Loại bỏ padding */
+  margin: 0; /* Loại bỏ margin */
+}
+#backBtn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #0d3068; /* Màu xanh giống trong hình */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 15%; /* Nút chiếm toàn bộ chiều rộng của container */
 }
 
-#quiz-container {
-  margin-bottom: 20px;
-  font-size: 24px;
+#backBtn:hover {
+  background-color: #2563eb; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Liên kết Xem lịch sử thi */
+#historyBtn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #11523c; /* Màu xanh giống trong hình */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 15%; /* Nút chiếm toàn bộ chiều rộng của container */
+}
+
+#historyBtn:hover {
+  background-color: #2563eb; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+#submitBtn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #8b2f0b; /* Màu xanh giống trong hình */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 15%; /* Nút chiếm toàn bộ chiều rộng của container */
+}
+
+#submitBtn:hover {
+  background-color: #2563eb; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 #question-nav {
   position: fixed;
-  right: 65px;
-  top: 300px;
+  right: 1%; /* Giảm khoảng cách để gọn hơn */
+  top: 20%; /* Đẩy lên để tránh chắn nội dung */
+  width: auto; /* Kích thước cố định cho 5 cột, mỗi cột ~60px + gap */
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-height: 80vh;
+  grid-template-columns: repeat(3, 60px); /* Cố định chiều rộng mỗi cột */
+  gap: 8px; /* Giảm khoảng cách giữa các nút */
   overflow-y: auto;
+  z-index: 100; /* Đảm bảo nằm trên nội dung khác */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .nav-btn {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  min-width: 60px; /* Ngăn thu nhỏ khi zoom */
+  min-height: 60px; /* Ngăn thu nhỏ khi zoom */
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -129,9 +171,10 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px; /* Giảm nhẹ để gọn hơn */
   transition: background-color 0.3s;
   position: relative;
+  box-sizing: border-box;
 }
 
 .nav-btn.answered {
@@ -157,7 +200,7 @@ h1 {
 }
 
 .nav-btn .status {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 5px;
 }
 .question-block {
@@ -177,7 +220,7 @@ h1 {
 }
 
 .choice {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .choice input[type="radio"] {
@@ -208,49 +251,12 @@ h1 {
   z-index: 10;
 }
 
-.button-group {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.button-group button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#submitBtn {
-  background-color: #2196f3;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-#submitBtn:hover {
-  background-color: #1976d2;
-}
-
-#backBtn {
-  background-color: #24039b;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-}
 #settingsBtn {
   background-color: #801a08;
   color: white;
   cursor: pointer;
   font-size: 20px;
 }
-#historyBtn {
-  background-color: #656264d3;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-}
-#backBtn:hover,
 #settingsBtn:hover,
 #historyBtn:hover {
   background-color: #5b559b;
@@ -260,45 +266,6 @@ h1 {
   background-color: #363232;
   cursor: not-allowed;
   font-size: 20px;
-}
-
-#fixed-timer {
-  position: fixed;
-  right: 60px; /* Cách mép phải 20px */
-  top: 60%; /* Căn giữa theo chiều dọc */
-  transform: translateY(-50%); /* Dịch chuyển lên để căn giữa */
-  background: linear-gradient(
-    135deg,
-    #121111,
-    #533423
-  ); /* Gradient màu nổi bật */
-  color: white;
-  padding: 12px 24px;
-  border-radius: 7px; /* Bo góc mềm mại */
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 1.4rem;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bóng đổ hiện đại */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
-}
-
-#fixed-timer:hover {
-  transform: translateY(-50%) scale(1.05); /* Giữ căn giữa dọc khi hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-#fixed-timer::before {
-  font-size: 1.9rem;
-}
-
-#fixed-time {
-  font-size: 1.9rem
-  font-weight: bold;
-  letter-spacing: 2px;
 }
 
 table {
@@ -435,93 +402,84 @@ th {
   background-color: #45a049;
 }
 
-@media screen and (max-width: 600px) {
-  #fixed-timer {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-  }
-
-  #fixed-timer::before {
-    font-size: 1.5rem;
-  }
-}
-/* Style cho các nút trong button-group của test-mode-selection */
-#test-mode-selection .button-group {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Khoảng cách giữa các nút */
-  margin: 20px 0;
-}
-
-#test-mode-selection button {
-  padding: 45px 70px; /* Tăng kích thước nút */
-  font-size: 38px; /* Tăng kích thước chữ */
-  font-weight: bold;
-  color: white; /* Chữ màu trắng */
-  background-color: #a31d1d;
-  border: none;
-  border-radius: 5px; /* Bo góc nút */
-  box-shadow: 0 4px 15px rgba(74, 79, 83, 0.3); /* Đổ bóng nhẹ */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
-}
-
-#test-mode-selection button:hover {
-  background: linear-gradient(90deg, #155294, #0096cc); /* Gradient đậm hơn khi hover */
-  box-shadow: 0 6px 20px rgba(7, 8, 10, 0.5); /* Đổ bóng mạnh hơn */
-  transform: translateY(-2px); /* Nút nhấc lên nhẹ khi hover */
-}
-
-#test-mode-selection button:active {
-  transform: translateY(1px); /* Nút nhấn xuống khi click */
-  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.2); /* Giảm bóng khi nhấn */
-}
-
 /* Đảm bảo các nút trong review mode cũng đẹp */
 #review-screen button {
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(90deg, #0c3115, #087020); /* Gradient xanh lá cho nút quay lại */
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 12px 40px; /* Khoảng cách bên trong nút: 12px trên/dưới, 40px trái/phải */
+  font-size: 30px; /* Kích thước chữ là 30px */
+  font-weight: bold; /* Chữ in đậm */
+  color: #ffffff; /* Màu chữ là trắng */
+  background: linear-gradient(
+    90deg,
+    #a31d14,
+    #b32d16
+  ); /* Màu nền gradient từ đỏ đậm (#a31d14) sang đỏ nhạt hơn (#b32d16) */
+  border: none; /* Không có viền */
+  border-radius: 8px; /* Bo góc 8px để nút trông mềm mại */
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); /* Bóng đổ nhẹ, màu xanh lá nhạt với độ trong suốt 0.3 */
+  cursor: pointer; /* Con trỏ chuột hiển thị dạng bàn tay khi hover, cho biết nút có thể nhấn */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà cho tất cả các thuộc tính trong 0.3 giây */
+  text-transform: uppercase; /* Chuyển tất cả chữ thành chữ in hoa */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ là 1px */
+  text-align: center; /* Căn giữa nội dung chữ bên trong nút */
+  display: flex; /* Sử dụng Flexbox để căn chỉnh nội dung bên trong nút */
+  justify-content: center; /* Căn giữa nội dung theo trục ngang */
+  align-items: center; /* Căn giữa nội dung theo trục dọc */
+  margin: 1px 65px 10px; /* Giảm margin-top xuống 10px để sát header, căn giữa ngang, giữ margin-bottom 55px */
+  width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+  max-width: 300px; /* Giới hạn chiều rộng tối đa để nút không quá lớn */
 }
 
 #review-screen button:hover {
-  background: linear-gradient(90deg, #1e7e34, #28a745);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
-  transform: translateY(-2px);
-}
-
-#review-screen button:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 10px rgba(40, 167, 69, 0.2);
+  background: linear-gradient(
+    90deg,
+    #1e7e34,
+    #28a745
+  ); /* Khi hover, đổi màu nền thành gradient xanh lá */
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5); /* Tăng bóng đổ khi hover */
+  transform: translateY(-2px); /* Nâng nút lên 2px khi hover */
 }
 /* Style cho màn hình ôn tập */
 #review-screen .question-block {
-  margin-bottom: 20px;
+  max-width: 95%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9; /* Màu nền nhẹ cho ôn tập */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+  border-radius: 8px; /* Bo góc mềm mại */
+  border: 1px solid #ddd; /* Viền nhẹ */
+}
+#review-screen {
+  margin-top: 10px; /* Khoảng cách 20px từ header phía trên */
+}
+#review-screen h1 {
+  color: #ffffff; /* Chữ màu trắng */
+  text-align: center; /* Căn giữa để đồng bộ với các tiêu đề khác */
+  font-family: "Inter", "Roboto", Arial, sans-serif; /* Font hiện đại */
+  font-size: 3rem; /* Kích thước chữ */
+  font-weight: 700; /* Chữ đậm */
+  text-transform: uppercase; /* Chữ in hoa để đồng bộ với các tiêu đề khác */
+  margin-bottom: 1px; /* Khoảng cách dưới để không sát nút bên dưới */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Thêm bóng đổ: lệch 2px ngang, 2px dọc, mờ 4px, màu đen với độ trong suốt 0.5 */
 }
 
 #review-screen .question {
   font-size: 25px; /* Tăng cỡ chữ cho câu hỏi, ví dụ từ 16px lên 20px */
   font-weight: bold;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 #review-screen .choices-container {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 #review-screen .choice {
   font-size: 25px; /* Tăng cỡ chữ cho các lựa chọn, ví dụ từ 14px lên 18px */
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 #review-screen .choice.correct {
-  color: #1e27a5; /* Màu xanh cho đáp án đúng */
+  color: #2804ad; /* Màu xanh cho đáp án đúng */
   font-weight: bold;
 }
